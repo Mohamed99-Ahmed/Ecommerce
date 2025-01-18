@@ -1,5 +1,5 @@
 import type { Config } from "tailwindcss";
-
+const textshadow = require('tailwindcss-textshadow');
 export default {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -24,9 +24,12 @@ export default {
         
       },
       textShadow: {
-        '4d': '2px 2px 2px #000, 4px 4px 4px #333, 6px 6px 6px #666, 8px 8px 8px #999',
+        '4d': '1px 0px 2px #000, 0px 1px 2px #000, -1px 0px 2px #000, 0px -1px 2px #000',
       },
+      boxShadow:{
+        topShadow:"0 -1px 2px #eadfdf"
+      }
     },
   },
-  plugins: [],
+  plugins: [textshadow],
 } satisfies Config;
